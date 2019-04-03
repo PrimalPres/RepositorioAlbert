@@ -22,8 +22,9 @@
 							<button	name="do_toggle_done"	type="object"
 									   string="Toggle	Done"	class="oe_highlight"	/>
 							<button	name="do_clear_done"	type="object"
-																	string="Clear	All	Done"	/>
+									   string="Clear	All	Done"	/>
 						</header>
+
 						<sheet>
 							<group	name="group_top">
 								<group	name="group_left">
@@ -51,17 +52,17 @@
 		</record>
 
 		<record	id="view_filter_todo_task"	model="ir.ui.view">
-		<field	name="name">To-do	Task	Filter</field>
-		<field	name="model">todo.task</field>
-		<field	name="arch"	type="xml">
+			<field	name="name">To-do	Task	Filter</field>
+			<field	name="model">todo.task</field>
+			<field	name="arch"	type="xml">
 				<search>
 						<field	name="name"/>
 						<filter	string="Not	Done"
-														domain="[('is_done','=',False)]"/>
+										domain="[('is_done','=',False)]"/>
 						<filter	string="Done"
-														domain="[('is_done','!=',False)]"/>
+										domain="[('is_done','!=',False)]"/>
 				</search>
-		</field>
-</record>
+			</field>
+		</record>
     </data>
 </openerp>
