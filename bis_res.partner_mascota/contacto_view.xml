@@ -1,0 +1,31 @@
+<?xml	version="1.0"?>
+<openerp>
+    <data>
+
+		<!-- Extend form -->
+    <record id="view_form_contacto_inherited" model="ir.ui.view">
+      <field name="name">view form de contacto inherited</field>
+      <field name="model">contacto</field>
+      <field name="inherit_id" ref="res.partner.form"/>
+      <field name="arch" type="xml">
+
+		  <xpath expr="(//field[@name=mobile])[2]" position="after">
+			<field	name="hacer"/>
+		  </xpath>
+
+      </field>
+    </record>
+
+       <!-- <record	id="view_tree_todo_task_inherited"	model="ir.ui.view">
+		    <field	name="name">view_tree_todo_task_inherited</field>
+		    <field	name="model">todo.task</field>
+		    <field	name="inherit_id"	ref="res.partner."/>
+		    <field	name="arch"	type="xml">
+				<field	name="name"	position="after">
+						<field	name="user_id"	/>
+				</field>
+		    </field>
+        </record>-->
+
+    </data>
+</openerp>
