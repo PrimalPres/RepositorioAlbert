@@ -6,10 +6,10 @@
     <record id="view_form_contacto_inherited" model="ir.ui.view">
       <field name="name">view form de contacto inherited</field>
       <field name="model">contacto</field>
-      <field name="inherit_id" ref="res.partner.form"/>
+      <field name="inherit_id" ref="base.view_partner_form"/>
       <field name="arch" type="xml">
 
-		  <xpath expr="(//field[@name=mobile])[2]" position="after">
+		  <xpath expr="//field[@name='mobile'][1]" position="after">
 			<field	name="hacer"/>
 		  </xpath>
 
